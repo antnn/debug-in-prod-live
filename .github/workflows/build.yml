@@ -126,7 +126,7 @@ jobs:
 
       - name: Download spp-platform image
         timeout-minutes: 5
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: spp-platform
           path: .
@@ -205,7 +205,7 @@ jobs:
 
       - name: Download spp-platform image
         timeout-minutes: 5
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: spp-platform
           path: .
@@ -262,7 +262,7 @@ jobs:
 
       - name: Download spp-platform image
         timeout-minutes: 5
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: spp-platform
           path: .
@@ -309,7 +309,7 @@ jobs:
 
       - name: Download spp-platform image
         timeout-minutes: 5
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: spp-platform
           path: .
@@ -335,7 +335,7 @@ jobs:
 
       - name: Download spp-platform image
         timeout-minutes: 5
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: spp-platform
           path: .
@@ -542,7 +542,7 @@ jobs:
           draft: true
 
       - name: Download spp-platform artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: spp-platform-${{ needs.make-distribution.outputs.release_version }}.tar.gz
 
@@ -570,7 +570,7 @@ jobs:
         run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
       - name: Download spp-platform artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: spp-platform-${{ needs.make-distribution.outputs.release_version }}.tar.gz
           path: ./docker/spp-platform
